@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from passlib.hash import sha256_crypt
 import mysql.connector as mariadb
 app = Flask(__name__)
-maraidb_connection = mariadb.connect(user='ogupta', password='Ojas@150297', database='Login')
+maraidb_connection = mariadb.connect(user='ogupta', password='xyz', database='Login')
 @app.route('/')
 def index():
   username = "Jack"
