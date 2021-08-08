@@ -22,9 +22,7 @@ def do_admin_login():
 
   cur = mariadb_connect.cursor(buffered=True)
   select_stmt = "SELECT * FROM Login WHERE username = 'Jack'"
-  #data_employee = ('Jack')
   data = cur.execute(select_stmt)
-  #data = cur.execute('SELECT * FROM Login WHERE username=%(userName)s')
   data = cur.fetchone()[2]
 
   if password == data:
